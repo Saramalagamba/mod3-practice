@@ -10,3 +10,24 @@ repetitions(‘list’) // result: “LIiSssTttt”
 repetitions(function) // result: “FUuNnnTtttIiiiiOoooooNnnnnnn”
 
 */
+
+
+function repetitions(str) {
+
+    let text="";
+
+    for (let i = 0; i < str.length; i++) {        
+
+        text += str.charAt(i).toUpperCase();
+
+        if (i > 0) {
+
+            for (let j = 0 ; j < i; j++)
+            text += str.charAt(i);
+        }       
+    }
+    
+    return text;
+}
+
+showContent(5, repetitions("function"));
