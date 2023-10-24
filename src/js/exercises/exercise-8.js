@@ -6,3 +6,13 @@ que ocupa cada carácter en el abecedario. Para que sea más sencillo, elimina l
 */
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
+function positionAlphabetArray(text){
+text1 = transformText(text);
+text2 = replaceText(text1);
+myStrtoArray = text2.split("");
+let alphabetArray = alphabet.split("");
+let myArrayPosition = [];
+myStrtoArray.forEach(char => myArrayPosition.push(alphabetArray.indexOf(char)));
+return myArrayPosition;
+}
+showContent(8, positionAlphabetArray("lfksjd foiaal éaI ERNÍÚkf"));
