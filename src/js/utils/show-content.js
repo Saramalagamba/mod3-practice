@@ -18,3 +18,25 @@ function toggleHide(id) {
   toggleEl.innerHTML = isHidden ? "Ocultar resultado" : "Mostrar resultado";
   contentEl.className = isHidden ? "" : "hidden";
 }
+
+function transformText(text){
+  text = text.toLowerCase().replaceAll(" " , "");
+  return text;  
+}
+
+function replaceText(text){
+const accent = "áéíóúÁÉÍÓÚ";
+const vowels = "aeiouAEIOU";
+for (let i = 0; i < accent.length; i++ ){
+text = text.replaceAll(accent.charAt(i) , vowels.charAt(i));
+}
+return text;
+}
+
+function reverseText(text){  
+  let text2 = "";  
+  for (let i = text.length -1 ; i >= 0; i-- ){
+      text2 += text.charAt(i);
+  }
+  return text2;
+}
