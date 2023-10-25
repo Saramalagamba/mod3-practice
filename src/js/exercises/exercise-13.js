@@ -25,7 +25,6 @@ Agrupa en un array las peliculas por categorias:
 
 
 function filterAndConcatArrayofCategories() {
-
     let arrayOfTypeCategories = Object.values(categories);
     let arrayOfConcatCategories = [];
     for (let i = 0; i < arrayOfTypeCategories.length; i++) {
