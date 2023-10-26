@@ -15,28 +15,28 @@ function filterActorBestRating() {
     let bestfilmLeo = "";
     let bestfilmRobert = "";
     let bestfilmTom = "";
+
     for (let i = 0; i < arrayOfActors.length; i++) {
-        if (arrayOfActors[i].actors === "Leonardo Dicaprio") {
-            if (maxRatingLeo < rating[i]) {
-                maxRatingLeo = rating[i];
-                bestfilmLeo = title[i];
+        if (arrayOfActors[i].actors.includes("Leonardo DiCaprio")) {
+            if (maxRatingLeo < arrayOfActors[i].rating) {
+                maxRatingLeo = arrayOfActors[i].rating;
+                bestfilmLeo = arrayOfActors[i].title;
             }
         }
-        if (arrayOfActors[i].actors === "Robert De Niro") {
-            if (maxRatingRobert < movie.rating[i]) {
-                maxRatingRobert = movie.rating[i];
-                bestfilmRobert = movie.title[i];
+        if (arrayOfActors[i].actors.includes("Robert De Niro")) {
+            if (maxRatingRobert < arrayOfActors[i].rating) {
+                maxRatingRobert = arrayOfActors[i].rating;
+                bestfilmRobert = arrayOfActors[i].title;
             }
         }
-        if (arrayOfActors[i].actors === "Tom Hanks") {
-            if (maxRatingTom < movie.rating[i]) {
-                maxRatingTom = movie.rating[i];
-                bestfilmTom = movie.title[i];
+        if (arrayOfActors[i].actors.includes("Tom Hanks")) {
+            if (maxRatingTom < arrayOfActors[i].rating) {
+                maxRatingTom = arrayOfActors[i].rating;
+                bestfilmTom = arrayOfActors[i].title;
             }
         }
     }
-    let arrayBestFilmActors =[];
-    arrayBestFilmActors = arrayBestFilmActors.push [bestfilmLeo, bestfilmRobert, bestfilmTom];
-    return arrayBestFilmActors;
+
+    return [bestfilmLeo, bestfilmRobert, bestfilmTom];
 }
 showContent(14, filterActorBestRating());
