@@ -6,7 +6,6 @@ Muestra un array que solo incluya la pelicula mejor valorada de cada uno de esto
 - Tom Hanks
 */
 
-
 function filterActorBestRating() {
     let arrayOfActors = movies.map((movie) => ({ rating: movie.rating, title: movie.title, actors: movie.actors}));
     let maxRatingLeo = 0;
