@@ -33,7 +33,6 @@ function isAnIsogram(text) {
                 equalWord = false;
             }
         } else {valueWord = arrayOfword[i]}
-        console.log(equalWord);
     }
 
     if (equalWord) {
