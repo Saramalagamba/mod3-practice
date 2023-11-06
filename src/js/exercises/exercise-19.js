@@ -14,3 +14,19 @@ Ejemplo: "Hello world"
 }
 Nota: siempre letras minúsculas y sin tildes (para simplificar)
 */
+
+function objetcKeysText(text) {
+    let transformedText = transformText(text);
+    transformedText = replaceText(transformedText);
+    const objectText = {};
+    transformedText.split('').forEach(char => {
+        if (Object.keys(objectText).includes(char)) {
+            objectText[char] += 1;
+        }
+        else {
+            objectText[char] = 1;
+        }
+    });
+    return objectText;
+}
+showContent(19, objetcKeysText("Holá múndo"));
